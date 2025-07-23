@@ -1,7 +1,12 @@
-bi:
-  target: dev
+ bi:
   outputs:
     dev:
-      type: duckdb
-      path: ../duckdb-demo.duckdb
-      threads: 1
+      account: RZIRXYJ-RY81273
+      database: lightdash_db
+      password: Salma27med313!
+      schema: bi
+      threads: 10
+      type: snowflake
+      user: salma
+      warehouse: compute_wh
+  target: dev

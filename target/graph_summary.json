@@ -1,0 +1,1 @@
+{"_invocation_id": "a1fa5235-d7d8-43f2-bede-6e03dc517d03", "linked": {"0": {"name": "model.bi.base_bank_failures", "type": "model", "succ": [1]}, "1": {"name": "model.bi.clean_bank_failures", "type": "model", "succ": [2]}, "2": {"name": "exposure.bi.tableau_dashboard", "type": "exposure"}}}

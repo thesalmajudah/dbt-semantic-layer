@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bi  # this should match your schema name
+    database: lightdash_db
+    schema: bi
+    tables:
+      - name: bank_failures
