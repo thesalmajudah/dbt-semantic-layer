@@ -1,0 +1,9 @@
+exposures:
+  - name: tableau_dashboard
+    type: dashboard
+    url: https://public.tableau.com/views/dbt-bi
+    owner:
+      name: Salma
+      email: salma.juda96@gmail.com
+    depends_on:
+      - ref('clean_bank_failures')

@@ -1,0 +1,7 @@
+bi:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../duckdb-demo.duckdb
+      threads: 1

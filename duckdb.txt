@@ -1,0 +1,338 @@
+Number of tables in database: 17
+Table names:
+- bank_failures
+- boxplot
+- calendar
+- candle
+- christmas_cost
+- companies
+- country_stats_scatter
+- gold_vs_bitcoin
+- japan_births_deaths
+- japan_population
+- metrics
+- niger_population
+- quotes
+- radar
+- sankey
+- search_trends
+- tree
+
+Tables in database:
+- bank_failures
+
+Schema:
+  c1: BIGINT
+  Bank: VARCHAR
+  City: VARCHAR
+  State: VARCHAR
+  Date: DATE
+  Acquired by: VARCHAR
+  Assets ($mil.): DOUBLE
+
+First 5 rows:
+  (1, 'Douglass National Bank', 'Kansas City', 'Missouri', datetime.date(2008, 1, 25), 'Liberty Bank and Trust', 58.5)
+  (2, 'Hume Bank', 'Hume', 'Missouri', datetime.date(2008, 3, 7), 'Security Bank', 18.7)
+  (3, 'Bear Stearns', 'New York City', 'New York', datetime.date(2008, 3, 16), 'J.P. Morgan Chase', 395000.0)
+  (4, 'ANB Financial N.A.', 'Bentonville', 'Arkansas', datetime.date(2008, 5, 9), 'Pulaski Bank and Trust Company', 2100.0)
+  (5, 'First Integrity Bank, N.A.', 'Staples', 'Minnesota', datetime.date(2008, 5, 30), 'First International Bank and Trust', 54.7)
+
+---
+- boxplot
+
+Schema:
+  gold: BIGINT
+  silver: BIGINT
+  crude: BIGINT
+  slick: BIGINT
+  copper: BIGINT
+  iron: BIGINT
+  diamond: BIGINT
+  rubber: BIGINT
+  lead: BIGINT
+
+First 5 rows:
+  (2, 0, 9, 13, 1, 6, 6, 8, 16)
+  (1, 1, 8, 12, 2, 3, 10, 9, 17)
+  (5, 2, 7, 11, 2, 5, 5, 10, 9)
+  (8, 3, 6, 10, 2, 0, 10, 12, 16)
+  (8, 4, 5, 9, 2, 5, 11, 8, 15)
+
+---
+- calendar
+
+Schema:
+  dt: DATE
+  v: BIGINT
+
+First 5 rows:
+  (datetime.date(2023, 12, 31), 96)
+  (datetime.date(2023, 12, 30), 127)
+  (datetime.date(2023, 12, 29), 117)
+  (datetime.date(2023, 12, 28), 127)
+  (datetime.date(2023, 12, 27), 48)
+
+---
+- candle
+
+Schema:
+  time: TIME
+  open: DOUBLE
+  close: DOUBLE
+  low: DOUBLE
+  high: DOUBLE
+  volume: BIGINT
+
+First 5 rows:
+  (datetime.time(16, 20, 24), 0.8487606498379427, 1.011694756529808, 0.6487606498379428, 1.051694756529808, 24)
+  (datetime.time(16, 20, 25), 0.8232978303428045, 1.0420455992257023, 0.6432978303428045, 1.1220455992257024, 37)
+  (datetime.time(16, 20, 26), 0.8315308086462325, 1.0628865112102164, 0.7715308086462325, 1.1028865112102164, 46)
+  (datetime.time(16, 20, 27), 0.7982695763003832, 1.0309999158739098, 0.7582695763003832, 1.2309999158739098, 43)
+  (datetime.time(16, 20, 28), 0.758356097485364, 1.041309915032649, 0.618356097485364, 1.161309915032649, 28)
+
+---
+- christmas_cost
+
+Schema:
+  Country: VARCHAR
+  CostOfChristmas: BIGINT
+  AvgSalary: BIGINT
+  Trunk: BIGINT
+  Star: BIGINT
+
+First 5 rows:
+  ('-', 0, 0, 300, 0)
+  ('-', 0, 0, 300, 0)
+  ('Columbia', 198, 13560, 0, 0)
+  ('South Africa', 166, 19950, 0, 0)
+  ('India', 146, 24887, 0, 0)
+
+---
+- companies
+
+Schema:
+  Company: VARCHAR
+  PnL: DOUBLE
+  Revenue: DOUBLE
+  Negatives: DOUBLE
+
+First 5 rows:
+  ('Microsoft', 26078.735577680123, 13795.08709373977, 46415.06176068331)
+  ('Oracle', 10841.095874427958, 10337.167384566274, 8072.18465403188)
+  ('Paypal', 104765.32396574998, 31509.14985787617, 33345.81041606027)
+  ('Monero', 66581.14837661367, 2848.6671889857857, 36613.12325221603)
+  ('FXC', 51627.65855389829, 2038.1600825498813, 35075.56427049567)
+
+---
+- country_stats_scatter
+
+Schema:
+  Country: VARCHAR
+  Population: DOUBLE
+  GDP: DOUBLE
+  GDPperCapita: DOUBLE
+  exports: DOUBLE
+  exportsPerCapita: DOUBLE
+
+First 5 rows:
+  ('US', 301922.6545274005, 14536.102692490444, 45.47691990218126, 2434.078296128057, 18.6962791840193)
+  ('France', 215465.40860005902, 3293.0545936583544, 37.06058616000227, 338.8896690256194, 15.273754575693948)
+  ('japan', 117297.99508017422, 4787.947928255052, 38.00316290058196, 537.8515445673312, 15.622620693303508)
+  ('Germany', 87666.02990763634, 3390.1777664721944, 36.28363678813912, 560.8343345099919, 17.542450701600544)
+  ('UK', 63519.29192613862, 2171.674413194694, 37.56871878791135, 262.04243512479457, 15.374696916620506)
+
+---
+- gold_vs_bitcoin
+
+Schema:
+  time: TIMESTAMP
+  gold: DOUBLE
+  bitcoin: DOUBLE
+
+First 5 rows:
+  (datetime.datetime(2024, 12, 1, 16, 0), 0.96, 0.97)
+  (datetime.datetime(2024, 12, 1, 16, 0, 1), 0.9792, 0.9312)
+  (datetime.datetime(2024, 12, 1, 16, 0, 2), 1.02816, 0.97776)
+  (datetime.datetime(2024, 12, 1, 16, 0, 3), 1.0487232, 0.9875376)
+  (datetime.datetime(2024, 12, 1, 16, 0, 4), 1.017261504, 1.03691448)
+
+---
+- japan_births_deaths
+
+Schema:
+  Year: DATE
+  Births: BIGINT
+  Deaths: BIGINT
+  Births_SD_MARKLINE: VARCHAR
+  Births_SD_MARKAREA: VARCHAR
+  Births_SD_MARKPOINT: VARCHAR
+  Delta: BIGINT
+
+First 5 rows:
+  (datetime.date(1899, 1, 1), 1386981, 932087, None, None, None, 454894)
+  (datetime.date(1900, 1, 1), 1420534, 910744, None, None, None, 509790)
+  (datetime.date(1901, 1, 1), 1501591, 925810, None, None, None, 575781)
+  (datetime.date(1902, 1, 1), 1510835, 959126, None, None, None, 551709)
+  (datetime.date(1903, 1, 1), 1489816, 931008, None, None, None, 558808)
+
+---
+- japan_population
+
+Schema:
+  Age: VARCHAR
+  Males: BIGINT
+  Females: BIGINT
+
+First 5 rows:
+  ('0', 441097, 417432)
+  ('1', 447576, 422832)
+  ('2', 454476, 428626)
+  ('3', 462238, 435235)
+  ('4', 482670, 453838)
+
+---
+- metrics
+
+Schema:
+  gold: BIGINT
+  silver: BIGINT
+  crude: BIGINT
+  slick: BIGINT
+  copper: BIGINT
+  iron: BIGINT
+  diamond: BIGINT
+  rubber: BIGINT
+  lead: BIGINT
+
+First 5 rows:
+  (6, 0, 9, 13, 1, 0, 8, 10, 9)
+  (4, 1, 8, 12, 0, 3, 11, 11, 13)
+  (5, 2, 7, 11, 1, 3, 4, 8, 19)
+  (1, 3, 6, 10, 2, 1, 9, 11, 11)
+  (6, 4, 5, 9, 2, 5, 8, 6, 16)
+
+---
+- niger_population
+
+Schema:
+  Age: VARCHAR
+  Males: BIGINT
+  Females: BIGINT
+
+First 5 rows:
+  ('0', 564163, 551463)
+  ('1', 530222, 520363)
+  ('2', 505621, 496367)
+  ('3', 484178, 475397)
+  ('4', 464755, 456333)
+
+---
+- quotes
+
+Schema:
+  time: TIME
+  status: VARCHAR
+  instrument: VARCHAR
+  symbol_SD_TAG: VARCHAR
+  price_SD_CURUSD: DOUBLE
+  bid: DOUBLE
+  bid_SD_BG: VARCHAR
+  bid_SD_CODE: VARCHAR
+  percent_SD_PERCENT0: DOUBLE
+  percbar_SD_DATABAR: DOUBLE
+  bid_SD_FG: VARCHAR
+
+First 5 rows:
+  (datetime.time(16, 15, 32), 'filled', 'USDNZD', 'UBS', 66.75959245767444, 19.380235392600298, None, '0.XXx', 0.2924596732482314, 0.2924596732482314, None)
+  (datetime.time(16, 15, 32), 'partial', 'GBPUSD', 'DB', 41.202276572585106, 6.972980173304677, None, '0.xXXx', 0.6712163046468049, 0.6712163046468049, None)
+  (datetime.time(16, 15, 32), 'partial', 'USDCAD', 'HSBC', 26.346891117282212, 14.343510922044516, None, '0.XXx', 0.8913500821217895, 0.8913500821217895, None)        
+  (datetime.time(16, 15, 32), 'partial', 'GBPUSD', 'UBS', 2.0541628589853644, 19.97608192730695, None, '0.xXXx', 0.4070572394412011, 0.4070572394412011, None)
+  (datetime.time(16, 15, 32), 'partial', 'EURUSD', 'DB', 43.01494541577995, 16.80965987034142, None, '0.XXx', 0.492378766881302, 0.492378766881302, None)
+
+---
+- radar
+
+Schema:
+  portfolio: VARCHAR
+  agri: BIGINT
+  realEstate: BIGINT
+  tech: BIGINT
+  growthPotential: BIGINT
+  finance: BIGINT
+
+First 5 rows:
+  ('threadneedle', 100, 100, 0, 50, 60)
+  ('diamonte', 10, 10, 80, 100, 20)
+
+---
+- sankey
+
+Schema:
+  OrderOrigin: VARCHAR
+  Exchange: VARCHAR
+  State: VARCHAR
+  v: BIGINT
+
+First 5 rows:
+  ('Internal', 'ICE', 'Filled', 13)
+  ('GUI', 'ICE', None, 4)
+  ('Web', 'ICE', 'Filled', 1)
+  ('Platform', 'NYSE', 'Filled', 17)
+  ('Internal', 'NYSE', 'New', 11)
+
+---
+- search_trends
+
+Schema:
+  Week: DATE
+  Matthew Perry: BIGINT
+  chandrayaan-3: BIGINT
+  titanic submarine: BIGINT
+  hurricane lee: BIGINT
+  maine shooting: BIGINT
+  nashville shooting: BIGINT
+  Tina Turner: BIGINT
+  Ken Block: BIGINT
+  Lil Tay: BIGINT
+  Jerry Springer: BIGINT
+  Angus Cloud: BIGINT
+  Nicola Bulley: BIGINT
+  Jason Aldean: BIGINT
+  Joe Jonas: BIGINT
+  Smash Mouth: BIGINT
+  Matthew Perry_SD_MARKPOINT: VARCHAR
+  chandrayaan-3_SD_MARKPOINT: VARCHAR
+  titanic submarine_SD_MARKPOINT: VARCHAR
+  hurricane lee_SD_MARKPOINT: VARCHAR
+  maine shooting_SD_MARKPOINT: VARCHAR
+  nashville shooting_SD_MARKPOINT: VARCHAR
+  Tina Turner_SD_MARKPOINT: VARCHAR
+  Ken Block_SD_MARKPOINT: VARCHAR
+  Lil Tay_SD_MARKPOINT: VARCHAR
+  Jerry Springer_SD_MARKPOINT: VARCHAR
+  Angus Cloud_SD_MARKPOINT: VARCHAR
+
+First 5 rows:
+  (datetime.date(2023, 1, 1), 0, 0, 0, 0, 0, 0, 1, 32, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', 'Ken Block', '', '', '')
+  (datetime.date(2023, 1, 8), 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '')
+  (datetime.date(2023, 1, 15), 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '')
+  (datetime.date(2023, 1, 22), 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '')
+  (datetime.date(2023, 1, 29), 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 4, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '')
+
+---
+- tree
+
+Schema:
+  Continent: VARCHAR
+  TradingBloc: VARCHAR
+  Country: VARCHAR
+  GDP: DOUBLE
+
+First 5 rows:
+  ('NA', 'US', 'US', 19.485)
+  ('Asia', 'China', 'China', 12.238)
+  ('Asia', 'Japan', 'Japan', 4.872)
+  ('Europe', 'EU', 'Germany', 3.693)
+  ('Asia', 'India', 'India', 2.651)
+
+---

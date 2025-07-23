@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: clean_bank_failures
+    description: Bank failure data by state
+    columns:
+      - name: state
+        description: US state of failed bank
+        meta:
+          dimension:
+            type: string
+
+      - name: assets
+        description: Bank assets in millions
+        meta:
+          dimension:
+            type: number
+
+    meta:
+      metrics:
+        - name: total_assets
+          label: Total Assets
+          description: Total bank assets
+          type: sum
+          sql: assets
+        - name: avg_assets
+          label: Avg. Assets
+          description: Average assets per failure
+          type: average
+          sql: assets
